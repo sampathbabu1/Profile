@@ -27,7 +27,7 @@
     display:flex;
     flex-direction: row;
     justify-content: flex-end;
-align-items: center;
+    align-items: center;
     margin:auto;
   }
   header nav .menu{
@@ -45,9 +45,10 @@ align-items: center;
     color:white;
   }
  header nav .menu a:hover{
-    padding: 10px;
-    z-index: 1000;
+   padding:8px;
+    /* z-index: 1000; */
     background-color: #fff;
+    box-sizing: border-box;
     border-radius: 8px;
     color: black
   }
@@ -59,9 +60,12 @@ align-items: center;
     border-radius: 5px;
     border: white;
     padding: 8px;
-
+    border-radius: 8px;
+    box-sizing: border-box;
+    background-color: white;
+    color: black;
   }
- 
+
 .btn:hover{
     background-color: white;
     color: black;
@@ -95,13 +99,16 @@ align-items: center;
     font-weight: 600;
   }
   .home .text-three{
-    font-size: 40px;
-    margin:5px 0;
-    color:var(--primary-color);
+    font-size: 25px;
+    text-align: center;
+    padding:  2%;
+    color: rgb(131, 90, 14);
   }
   .home .text-four{
     font-size: 23px;
-    margin:5px 0;
+    color: purple;
+    text-align: center;
+    padding: 2%;
   }
   
   /* Section Styling */
@@ -133,8 +140,6 @@ align-items: center;
   .contact .content {
     width: 30%;
   }
-
-
   section .content{
     width:90%;
     height:100%;
@@ -211,7 +216,23 @@ align-items: center;
  .about img{
    border-radius: 50%;
  }
-  
+  .me{
+    /* height: px;
+    width: 30px; */
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    margin: 4% auto;
+  }
+  .me img{
+    height: 30px;
+    width: 30px;
+  }
+  .me a{
+    position: relative;
+    left: 50px;
+    top: -25px;
+  }
 /* My Gallaery CSS */
 
  .gallery {
@@ -222,13 +243,16 @@ align-items: center;
 
 .grid-container {
   padding: 10%;
-  display:flexbox;
-  grid-gap: 1.0rem;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: repeat(2,10vw);
+  grid-gap: 2.0rem;
   justify-items: center;
 }
 .grid-item img {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
   z-index: 999;
+  /* display:flexbox; */
   margin: 5%;
   border-radius: 4%;
   width: 100%;
